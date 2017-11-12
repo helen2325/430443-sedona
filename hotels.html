@@ -38,10 +38,33 @@
               <input type="checkbox" name="appart">Аппартаменты
           </fieldset>
           <fieldset>
-              <!--тут будут ползунки-->
-              <input type="button" value="Показать">
+            <input type="button" value="Показать">
           </fieldset>
       </form>
+              <!--тут будут ползунки-->
+              <div class="slider-range"> 
+                  <div class="slider-range__line"></div>
+                  <span tabindex="0" class="slider-range__handle slider-range__handle-min"></span>
+                  <span tabindex="0" class="slider-range__handle slider-range__handle-max"></span>
+              </div>
+              <!--тут будут ползунки-->
+              
+              <!--сортировка-->
+              <h2 class="visually-hidden">Сортировка</h2>
+              <form>
+                 <p class="found">Найдено:3</p>
+                  <p class="sort">Сортировка:</p>
+                  <p class="first-sort">
+                     <input type="radio" value="По цене">По цене
+                     <input type="radio" value="По типу">По типу
+                     <input type="radio" value="По рейтингу">По рейтингу
+                  </p>
+                  <p class="second-sort">
+                     <input type="radio" value="От меньшего к большему">
+                     <input type="radio" value="От большего к меньшему">
+                  </p>
+              </form>
+              <!--сортировка-->   
       <section class="catalog">
           <h2 class="visually-hidden">Список гостиниц</h2>
           <ul class="catalog-list">
