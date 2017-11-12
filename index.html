@@ -96,21 +96,41 @@
                   </li>
               </ul>
           </section> 
-          <section>
+          <section class="booked">
               <h2 class="visually-hidden">Варианты брони</h2>
               <h3>Заинтересовались?</h3>
               <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <button>Поиск гостиницы в Седоне</button>
-              <!--Здесь будет форма-->
+              <button type="button">Поиск гостиницы в Седоне</button>
+              <form action="" method="get">
+                  <fieldset>
+                      <legend class="visually-hidden">Форма поиска гостиниц в седоне</legend>
+                      <p>
+                          <label for="booked-date-in">Дата заезда:</label>
+                          <input type="date" name="date" id="booked-date-in">
+                      </p>
+                      <p>
+                          <label for="booked-date-off">Дата заезда:</label>
+                          <input type="date" name="date" id="booked-date-off">
+                      </p>
+                      <p>
+                          <label>Взрослые:</label>
+                          <input type="number" min="1" step="1">
+                          <label>Дети:</label>
+                          <input type="number" min="0" step="1">
+                      </p>
+                      <input type="submit" value="Найти">
+                  </fieldset>
+              </form>
           </section>
           <section class="map">
-              <!--Здесь будет карта-->
+              <img src="img/map.jpg" alt="Карта с адресом" width="1200" height="auto">
           </section>
       </main> 
       <footer class="main-footer">
           <div class="width33">#visitsedona</div>
           <div class="footer-social width33">
               <ul>
+                  <h2 class="visually-hidden">Социальные сети</h2>
                   <li><a class="social-button" href="#">Вконтакте</a></li>
                   <li><a class="social-button" href="#">Фейсбук</a></li>
                   <li><a class="social-button" href="#">YouTube</a></li>
