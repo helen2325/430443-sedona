@@ -14,54 +14,63 @@
                   <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
               </a>
               <ul class="site-navigation">
-                  <li><a href="">Информация</a></li>
-                  <li><a href="">Фото и видео</a></li>
-                  <li><a href="">Карта штата</a></li>
-                  <li><a href="">Гостиницы</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу информации">Информация</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу фото и видео">Фото и видео</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу карты штата">Карта штата</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу гостиниц">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
       <main>
       <h1 class="visually-hidden">Гостиницы</h1>
-      <form>
+      <form action="https://echo.htmlacademy.ru/" method="get">
           <h2 class="visually-hidden">Фильтр</h2>
           <fieldset>
               <legend>Инфраструктура:</legend>
-              <input type="checkbox" name="pool">Бассейн
-              <input type="checkbox" name="parking">Парковка
-              <input type="checkbox" name="wi-fi">Wi-fi
+              <label for="pool">Бассейн</label>
+              <input type="checkbox" name="pool" id="pool">
+              <label for="parking">Парковка</label>
+              <input type="checkbox" name="parking" id="parking">
+              <label for="wifi">Wi-fi</label>
+              <input type="checkbox" name="wi-fi" id="wifi">
           </fieldset>
           <fieldset>
               <legend>Тип жилья:</legend>
-              <input type="checkbox" name="hotel">Гостиница
-              <input type="checkbox" name="motel">Мотель
-              <input type="checkbox" name="appart">Аппартаменты
-          </fieldset>
-          <fieldset>
-            <input type="button" value="Показать">
-          </fieldset>
-      </form>
+              <label for="hotel">Гостиница</label>
+              <input type="checkbox" name="hotel" id="hotel">
+              <label for="motel">Мотель</label>
+              <input type="checkbox" name="motel" id="motel">
+              <label for="appart">Аппартаменты</label>
+              <input type="checkbox" name="appart" id="appart">
+		  </fieldset>
               <!--тут будут ползунки-->
+              <h2>Стоимость в сутки(р):</h2>
+              <div>От 0</div>
+              <div>До 3000</div>
               <div class="slider-range"> 
                   <div class="slider-range__line"></div>
                   <span tabindex="0" class="slider-range__handle slider-range__handle-min"></span>
                   <span tabindex="0" class="slider-range__handle slider-range__handle-max"></span>
               </div>
               <!--тут будут ползунки-->
-              
+              <fieldset>
+            		<input type="button" value="Показать" aria-label="Кнопка показа гостиниц в зависимоти от выбранных параметров">
+              </fieldset>
+      </form>
+      
               <!--сортировка-->
               <h2 class="visually-hidden">Сортировка</h2>
-              <form>
+              <form action="https://echo.htmlacademy.ru/" method="get">
                  <p class="found">Найдено:3</p>
                   <p class="sort">Сортировка:</p>
                   <p class="first-sort">
-                     <input type="radio" value="По цене">По цене
-                     <input type="radio" value="По типу">По типу
-                     <input type="radio" value="По рейтингу">По рейтингу
+                     <input type="radio" name="sort1" value="По цене">По цене
+                     <input type="radio" name="sort1" value="По типу">По типу
+                     <input type="radio" name="sort1" value="По рейтингу">По рейтингу
                   </p>
                   <p class="second-sort">
-                     <input type="radio" value="От меньшего к большему">
-                     <input type="radio" value="От большего к меньшему">
+                     <input type="radio" name="sort2" value="От меньшего к большему">
+                     <input type="radio" name="sort2" value="От большего к меньшему">
                   </p>
               </form>
               <!--сортировка-->   
@@ -79,8 +88,8 @@
                         <span>От 4000 Р.</span>
                     </p>
                     <p>
-                        <a class="button button-more">Подробнее</a>
-                        <a class="button button-booking">Забронировать</a>
+                        <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостинице">Подробнее</a>
+                        <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
                     </p>
                   </div>
                   <div class="grade">
@@ -100,8 +109,8 @@
                           <span>От 3000 Р.</span>
                       </p>
                       <p>
-                          <a class="button button-more">Подробнее</a>
-                          <a class="button button-booking">Забронировать</a>
+                          <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостинице">Подробнее</a>
+                          <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
                       </p>
                   </div>
                   <div class="grade"> 
@@ -121,8 +130,8 @@
                           <span>От 2000 Р.</span>
                       </p>
                       <p>
-                          <a class="button button-more">Подробнее</a>
-                          <a class="button button-booking">Забронировать</a>
+                          <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостиницу">Подробнее</a>
+                          <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
                       </p>
                   </div>
                   <div class="grade"> 
@@ -144,7 +153,7 @@
           </div>
           <p class="footer-copyright width33">
                 <span>website by</span>
-                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
+                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на страницу разработчика макета сайта"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
           </p>
       </footer>
     </div>

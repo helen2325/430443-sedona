@@ -14,10 +14,10 @@
                   <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
               </a>
               <ul class="site-navigation">
-                  <li><a href="">Информация</a></li>
-                  <li><a href="">Фото и видео</a></li>
-                  <li><a href="">Карта штата</a></li>
-                  <li><a href="hotels.html">Гостиницы</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу информации">Информация</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу фото и видео">Фото и видео</a></li>
+                  <li><a href="#" aria-label="Ссылка на страницу карты штата">Карта штата</a></li>
+                  <li><a href="hotels.html" aria-label="Ссылка на страницу гостиниц">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
@@ -100,30 +100,30 @@
               <h2 class="visually-hidden">Варианты брони</h2>
               <h3>Заинтересовались?</h3>
               <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-              <button type="button">Поиск гостиницы в Седоне</button>
+              <button type="button" aria-label="Кнопка открытия формы поиска гостиницы в Седоне">Поиск гостиницы в Седоне</button>
               <form action="" method="get">
                   <fieldset>
                       <legend class="visually-hidden">Форма поиска гостиниц в седоне</legend>
                       <p>
                           <label for="booked-date-in">Дата заезда:</label>
-                          <input type="date" name="date" id="booked-date-in">
+                          <input type="date" name="date-in" id="booked-date-in">
                       </p>
                       <p>
                           <label for="booked-date-off">Дата заезда:</label>
-                          <input type="date" name="date" id="booked-date-off">
+                          <input type="date" name="date-off" id="booked-date-off">
                       </p>
                       <p>
                           <label>Взрослые:</label>
-                          <input type="number" min="1" step="1">
+                          <input type="number" min="1" step="1" name="number-of-adults">
                           <label>Дети:</label>
-                          <input type="number" min="0" step="1">
+                          <input type="number" min="0" step="1" name="number-of-children">
                       </p>
                       <input type="submit" value="Найти">
                   </fieldset>
               </form>
           </section>
           <section class="map">
-              <img src="img/map.jpg" alt="Карта с адресом" width="1200" height="auto">
+              <img src="img/map.jpg" alt="Карта с адресом:..." width="1200" height="auto">
           </section>
       </main> 
       <footer class="main-footer">
@@ -138,7 +138,7 @@
           </div>
           <p class="footer-copyright width33">
                 <span>website by</span>
-                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
+                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на разработчика макета сайта"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
           </p>
       </footer>
     </div>
