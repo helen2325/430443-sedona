@@ -5,6 +5,9 @@
     <meta name="keywords" content=""> 
     <meta name="description" content="">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
      <div class="container">
@@ -14,10 +17,10 @@
                   <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
               </a>
               <ul class="site-navigation">
-                  <li><a href="#" aria-label="Ссылка на страницу информации">Информация</a></li>
-                  <li><a href="#" aria-label="Ссылка на страницу фото и видео">Фото и видео</a></li>
-                  <li><a href="#" aria-label="Ссылка на страницу карты штата">Карта штата</a></li>
-                  <li><a href="hotels.html" aria-label="Ссылка на страницу гостиниц">Гостиницы</a></li>
+                  <li><a href="#" aria-label="информация">Информация</a></li>
+                  <li><a href="#" aria-label="фото и видео">Фото и видео</a></li>
+                  <li><a href="#" aria-label="карта штата">Карта штата</a></li>
+                  <li><a href="hotels.html" aria-label="гостиницы">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
@@ -47,15 +50,15 @@
           <section class="housingmealsouvenirs">
               <h2 class="visually-hidden">Наши предложения</h2>
               <ul class="housingmealsouvenirs-list">
-                  <li class="housing-item width33">
+                  <li class="housing-item width33-2">
                       <h3>Жилье</h3>
                       <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                   </li>
-                  <li class="meal-item width33">
+                  <li class="meal-item width33-2">
                       <h3>Еда</h3>
                       <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                   </li>
-                  <li class="souvenirs-item width33">
+                  <li class="souvenirs-item width33-2">
                       <h3>Сувениры</h3>
                       <p>Не только китайского, но и местного производства!</p>
                   </li>
@@ -109,7 +112,7 @@
                           <input type="date" name="date-in" id="booked-date-in">
                       </p>
                       <p>
-                          <label for="booked-date-off">Дата заезда:</label>
+                          <label for="booked-date-off">Дата выезда:</label>
                           <input type="date" name="date-off" id="booked-date-off">
                       </p>
                       <p>
@@ -127,18 +130,17 @@
           </section>
       </main> 
       <footer class="main-footer">
-          <div class="width33">#visitsedona</div>
+          <div class="tag width33">#visitsedona</div>
           <div class="footer-social width33">
-              <ul>
-                  <h2 class="visually-hidden">Социальные сети</h2>
-                  <li><a class="social-button" href="#">Вконтакте</a></li>
-                  <li><a class="social-button" href="#">Фейсбук</a></li>
-                  <li><a class="social-button" href="#">YouTube</a></li>
+              <ul class="social">
+                  <li><a class="social-button" href="#" target="_blank" aria-label="Вконтакте">Вконтакте</a></li>
+                  <li><a class="social-button" href="#" target="_blank" aria-label="Фейсбук">Фейсбук</a></li>
+                  <li><a class="social-button" href="#" target="_blank" aria-label="YouTube">YouTube</a></li>
               </ul>
           </div>
           <p class="footer-copyright width33">
                 <span>website by</span>
-                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на разработчика макета сайта"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
+                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="html academy"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
           </p>
       </footer>
     </div>

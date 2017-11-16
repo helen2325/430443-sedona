@@ -5,6 +5,9 @@
     <meta name="keywords" content=""> 
     <meta name="description" content="">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
      <div class="container">
@@ -14,16 +17,16 @@
                   <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
               </a>
               <ul class="site-navigation">
-                  <li><a href="#" aria-label="Ссылка на страницу информации">Информация</a></li>
-                  <li><a href="#" aria-label="Ссылка на страницу фото и видео">Фото и видео</a></li>
-                  <li><a href="#" aria-label="Ссылка на страницу карты штата">Карта штата</a></li>
-                  <li><a href="#" aria-label="Ссылка на страницу гостиниц">Гостиницы</a></li>
+                  <li><a href="#" aria-label="информация">Информация</a></li>
+                  <li><a href="#" aria-label="фото и видео">Фото и видео</a></li>
+                  <li><a href="#" aria-label="карта штата">Карта штата</a></li>
+                  <li><a aria-label="гостиницы">Гостиницы</a></li>
               </ul>
           </nav>
       </header>
       <main>
       <h1 class="visually-hidden">Гостиницы</h1>
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
           <h2 class="visually-hidden">Фильтр</h2>
           <fieldset>
               <legend>Инфраструктура:</legend>
@@ -44,9 +47,9 @@
               <input type="checkbox" name="appart" id="appart">
 		  </fieldset>
               <!--тут будут ползунки-->
-              <h2>Стоимость в сутки(р):</h2>
-              <div>От 0</div>
-              <div>До 3000</div>
+              <h2 class="price">Стоимость в сутки(р):</h2>
+              <div><input type="number">От 0</div> 
+              <div><input type="number">До 3000</div>
               <div class="slider-range"> 
                   <div class="slider-range__line"></div>
                   <span tabindex="0" class="slider-range__handle slider-range__handle-min"></span>
@@ -54,19 +57,19 @@
               </div>
               <!--тут будут ползунки-->
               <fieldset>
-            		<input type="button" value="Показать" aria-label="Кнопка показа гостиниц в зависимоти от выбранных параметров">
+            		<input type="button" value="Показать" aria-label="показать">
               </fieldset>
       </form>
       
               <!--сортировка-->
               <h2 class="visually-hidden">Сортировка</h2>
               <form action="https://echo.htmlacademy.ru/" method="get">
-                 <p class="found">Найдено:3</p>
+                 <p class="found">Найдено: 3</p>
                   <p class="sort">Сортировка:</p>
                   <p class="first-sort">
-                     <input type="radio" name="sort1" value="По цене">По цене
-                     <input type="radio" name="sort1" value="По типу">По типу
-                     <input type="radio" name="sort1" value="По рейтингу">По рейтингу
+                     <input type="radio" name="sort1" id="forprice" value="По цене"><label for="forprice">По цене</label>
+                     <input type="radio" name="sort1" id="fortype" value="По типу"><label for="fortype">По типу</label>
+                     <input type="radio" name="sort1" id="forrate" value="По рейтингу"><label for="forrate">По рейтингу</label>
                   </p>
                   <p class="second-sort">
                      <input type="radio" name="sort2" value="От меньшего к большему">
@@ -88,8 +91,8 @@
                         <span>От 4000 Р.</span>
                     </p>
                     <p>
-                        <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостинице">Подробнее</a>
-                        <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
+                        <a href="#" class="button button-more" aria-label="Подробнее">Подробнее</a>
+                        <a href="#" class="button button-booking" aria-label="Забронировать">Забронировать</a>
                     </p>
                   </div>
                   <div class="grade">
@@ -109,8 +112,8 @@
                           <span>От 3000 Р.</span>
                       </p>
                       <p>
-                          <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостинице">Подробнее</a>
-                          <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
+                          <a href="#" class="button button-more" aria-label="Подробнее">Подробнее</a>
+                          <a href="#" class="button button-booking" aria-label="Забронировать">Забронировать</a>
                       </p>
                   </div>
                   <div class="grade"> 
@@ -130,8 +133,8 @@
                           <span>От 2000 Р.</span>
                       </p>
                       <p>
-                          <a href="#" class="button button-more" aria-label="Ссылка на страницу с более подробной информацией о данной гостиницу">Подробнее</a>
-                          <a href="#" class="button button-booking" aria-label="Ссылка на страницу бронирования данной гостиницы">Забронировать</a>
+                          <a href="#" class="button button-more" aria-label="Подробнее">Подробнее</a>
+                          <a href="#" class="button button-booking" aria-label="Забронировать">Забронировать</a>
                       </p>
                   </div>
                   <div class="grade"> 
@@ -143,17 +146,17 @@
       </section>
       </main>
       <footer class="main-footer">
-          <div class="width33">#visitsedona</div>
+          <div class="tag width33">#visitsedona</div>
           <div class="footer-social width33">
-              <ul>
-                  <li><a class="social-button" href="#">Вконтакте</a></li>
-                  <li><a class="social-button" href="#">Фейсбук</a></li>
-                  <li><a class="social-button" href="#">YouTube</a></li>
+              <ul class="social">
+                  <li><a class="social-button" href="#" target="_blank" aria-label="Вконтакте">Вконтакте</a></li>
+                  <li><a class="social-button" href="#" target="_blank" aria-label="Фейсбук">Фейсбук</a></li>
+                  <li><a class="social-button" href="#" target="_blank" aria-label="YouTube">YouTube</a></li>
               </ul>
           </div>
           <p class="footer-copyright width33">
                 <span>website by</span>
-                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Ссылка на страницу разработчика макета сайта"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
+                <a class="copyright-button" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" aria-label="html academy"><img src="img/logo-htmlacademy.svg" weight="115" height="41" alt="html academy"></a>
           </p>
       </footer>
     </div>
