@@ -11,6 +11,9 @@ body {
 	
 	background-color: #ffffff;
 }
+.visually-hidden {
+    display: none;
+}
 
 a {
 	text-decoration: none;
@@ -20,7 +23,7 @@ a {
 .main-navigation {
 	font-size: 14px;
 	line-height: 26px;
-	font-style: bold;
+	font-weight: bold;
 	color: #000000;
 	background-color: #ffffff;
 }
@@ -194,17 +197,33 @@ a {
 	background-color: #81b3d2;
 }
 
+.footer-social a:hover {
+    background-color: #669ec0;
+}
+
+.footer-social a:active {
+    background-color: #5496bd;
+}
+
 .footer-copyright span {
 	font-size: 14px;
 	color: #000000;
 	line-height: 26px;
 }
 
+.copyright-button:hover path {
+    fill: #81b3d2;
+}
+
+.copyright-button:active path {
+    fill: #bdbbbc;
+}
+
 .booked label {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
-	color: #000;
+	color: #000000;
 }
 
 .booked input[type="date"],
@@ -212,11 +231,13 @@ input[type="number"] {
 	background-color: #f2f2f2;
 	border: none;
 }
-.booked input[type="date"]:hover {
+.booked input[type="date"]:hover,
+.booked input[type="number"]:hover {
 	background-color: #ebebeb;
 }
 
-.booked input[type="date"]:focus {
+.booked input[type="date"]:focus,
+.booked input[type="number"]:focus {
 	background-color: #ffffff;
 	border: solid 2px #e5e5e5;
 	outline: none;
@@ -236,6 +257,19 @@ input[type="submit"]:focus {
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
 }
+
+
+fieldset input[type="button"] {
+    background: none;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+}
+
+fieldset input[type="button"]:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
 
 .filters {
 	background-color: #889fb2; 
@@ -261,10 +295,18 @@ p.found {
 	line-height: 26px;
 }
 
-p.sort {
+.first-sort {
 	font-size: 12px;
 	line-height: 18px;
-	color: #000000;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.first-sort label {
+    border-bottom: 1px dashed #81b3d2;
+}
+
+.first-sort label:hover {
+    color: #81b3d2;
 }
 
 .catalog-item h3 {
@@ -272,6 +314,19 @@ p.sort {
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
+}
+
+.catalog-item h3:hover {
+    color: #81b3d2;
+}
+
+.catalog-item h3:active {
+    border-bottom: none;
+    color: #81b3d2;
+}
+
+.catalog-item h3:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .information span {
@@ -287,6 +342,7 @@ p.sort {
 	background-color: #f2f2f2;
 }
 
+
 .information .button {
 	font-size: 14px;
 	line-height: 21px;
@@ -298,6 +354,29 @@ p.sort {
 	background-color: #81b3d2;
 }
 
+.button-more:hover {
+    background-color: #669ec0;
+    
+}
+
+.button-more:active {
+    background-color: #5496bd;
+    color: rgba(255, 255, 255, 0.3);
+}
+
 .button-booking {
 	background-color: #766357;
+    
+}
+
+.button-booking:hover {
+	background-color: #604e43;
+}
+
+.button-booking:active {
+	background-color: #503e33;
+    color: rgba(255, 255, 255, 0.3);
+}
+input[type="checkbox"] {
+    
 }
