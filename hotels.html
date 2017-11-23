@@ -13,9 +13,11 @@
      <div class="container">
       <header class="main-header">
           <nav class="main-navigation">
+<!--
               <a href="index.html" class="main-header-logo">
                   <img src="img/logo.png" width="138" height="70" alt="Логотип Седона">
               </a>
+-->
               <ul class="site-navigation">
                   <li><a href="#" aria-label="информация">Информация</a></li>
                   <li><a href="#" aria-label="фото и видео">Фото и видео</a></li>
@@ -28,7 +30,8 @@
       <h1 class="visually-hidden">Гостиницы</h1>
       <form class="filters" action="https://echo.htmlacademy.ru/" method="get">
           <h2 class="visually-hidden">Фильтр</h2>
-          <fieldset>
+          <div class="check">
+          <fieldset class="fieldset-1">
               <legend>Инфраструктура:</legend>
               <label for="pool">Бассейн</label>
               <input type="checkbox" name="pool" id="pool" checked>
@@ -37,7 +40,7 @@
               <label for="wifi">Wi-fi</label>
               <input type="checkbox" name="wi-fi" id="wifi">
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset-2">
               <legend>Тип жилья:</legend>
               <label for="hotel">Гостиница</label>
               <input type="checkbox" name="hotel" id="hotel" checked>
@@ -47,6 +50,7 @@
               <input type="checkbox" name="appart" id="appart" checked>
 		  </fieldset>
               <!--тут будут ползунки-->
+            <fieldset class="fieldset-3">
               <h2 class="price">Стоимость в сутки(р):</h2>
               <div>От<input type="number" name="from" placeholder="0"></div> 
               <div>До<input type="number" name="to" placeholder="3000"></div>
@@ -56,14 +60,16 @@
                   <span tabindex="0" class="slider-range__handle slider-range__handle-max"></span>
               </div>
               <!--тут будут ползунки-->
-              <fieldset>
+              
             		<input type="button" value="ПОКАЗАТЬ" aria-label="показать">
               </fieldset>
+            </div>
       </form>
       
               <!--сортировка-->
               <h2 class="visually-hidden">Сортировка</h2>
               <form action="https://echo.htmlacademy.ru/" method="get">
+                <div class="result">
                  <p class="found">Найдено: 3</p>
                   <p class="sort">Сортировка:</p>
                   <p class="first-sort">
@@ -75,6 +81,7 @@
                      <input type="radio" name="sort2" value="От меньшего к большему">
                      <input type="radio" name="sort2" value="От большего к меньшему">
                   </p>
+                </div>
               </form>
               <!--сортировка-->   
       <section class="catalog">
