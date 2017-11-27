@@ -31,21 +31,33 @@
           <div class="check">
           <fieldset class="fieldset-1">
               <legend>Инфраструктура:</legend>
-              <label for="pool">Бассейн</label>
-              <input type="checkbox" name="pool" id="pool" checked>
-              <label for="parking">Парковка</label>
-              <input type="checkbox" name="parking" id="parking">
-              <label for="wifi">Wi-fi</label>
-              <input type="checkbox" name="wi-fi" id="wifi">
+              <div class="input-wrapper">
+              <input type="checkbox" name="pool" id="ch-1" checked hidden><label for="ch-1"></label>
+              <span class="input-wrapper__label">Бассейн</span>
+              </div>
+              <div class="input-wrapper">
+              <input type="checkbox" name="parking" id="ch-2" hidden><label for="ch-2"></label>
+              <span class="input-wrapper__label">Парковка</span>
+              </div>
+              <div class="input-wrapper">
+              <input type="checkbox" name="wifi" id="ch-3" hidden><label for="ch-3"></label>
+              <span class="input-wrapper__label">Wi-fi</span>
+              </div>
           </fieldset>
           <fieldset class="fieldset-2">
               <legend>Тип жилья:</legend>
-              <label for="hotel">Гостиница</label>
-              <input type="checkbox" name="hotel" id="hotel" checked>
-              <label for="motel">Мотель</label>
-              <input type="checkbox" name="motel" id="motel" checked>
-              <label for="appart">Аппартаменты</label>
-              <input type="checkbox" name="appart" id="appart" checked>
+              <div class="input-wrapper">
+              <input type="checkbox" name="hotel" id="ch-4" checked hidden><label for="ch-4"></label>
+              <span class="input-wrapper__label">Гостиница</span>
+              </div>
+              <div class="input-wrapper">
+              <input type="checkbox" name="motel" id="ch-5" checked hidden><label for="ch-5"></label>
+              <span class="input-wrapper__label">Мотель</span>
+              </div>
+              <div class="input-wrapper">
+              <input type="checkbox" name="apart" id="ch-6" checked hidden><label for="ch-6"></label>
+              <span class="input-wrapper__label">Аппартаменты</span>
+              </div>
 		  </fieldset>
               <!--тут будут ползунки-->
               
@@ -78,13 +90,17 @@
                  <p class="found">Найдено: 3</p>
                   <p class="sort">Сортировка:</p>
                   <p class="first-sort">
-                     <input type="radio" name="sort1" id="forprice" value="По цене"><label for="forprice">По цене</label>
-                     <input type="radio" name="sort1" id="fortype" value="По типу"><label for="fortype">По типу</label>
-                     <input type="radio" name="sort1" id="forrate" value="По рейтингу"><label for="forrate">По рейтингу</label>
+                     <input type="radio" name="sort1" id="forprice" value="По цене" hidden><label for="forprice">По цене</label>
+                     <input type="radio" name="sort1" id="fortype" value="По типу" hidden><label for="fortype">По типу</label>
+                     <input type="radio" name="sort1" id="forrate" value="По рейтингу" hidden><label for="forrate">По рейтингу</label>
                   </p>
                   <p class="second-sort">
-                     <input type="radio" name="sort2" value="От меньшего к большему">
-                     <input type="radio" name="sort2" value="От большего к меньшему">
+                    <a href="" class="first">
+                     <input type="radio" name="sort2" value="От меньшего к большему" hidden>
+                     </a>
+                     <a href="" class="second">
+                     <input type="radio" name="sort2" value="От большего к меньшему" hidden>
+                     </a>
                   </p>
                 </div>
               </form>
