@@ -4,7 +4,6 @@ body {
 	font-family: 'PT Sans', 'Arial', sans-serif;
 	font-size: 14px;
 	line-height: 26px;
-	font-weight: ;
 	color: #333333;
 	text-transform: uppercase;
 	background-color: #ffffff;
@@ -372,7 +371,7 @@ img {
 .booked p {
 	font-size: 14px;
 	line-height: 24px;
-	color: #33333;
+	color: #333333;
     margin: 0 0 46px 0;
     padding: 0;
 }
@@ -380,7 +379,7 @@ img {
 .booked button {
     font-family: inherit;
     width: 567px;
-    height: 88px;
+    height: 86px;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 26px;
@@ -401,52 +400,88 @@ img {
 }
 
 .map {
-    margin: 0;
-    padding: 0;
-    
+    position: relative;   
 }
 
-.booked fieldset {
-    padding: 50px;
+.map form {
+    box-sizing: border-box;
+    position: absolute;  
+    padding: 55px 55px;
+    width: 567px;
+    top: 0;
+    left: 50%;
+    background: #ffffff;
+    margin-left: -284px;
+    z-index: 1;
 }
 
-.booked label {
+.map fieldset {
+    border: none;
+}
+
+.map label {
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: bold;
 	color: #000000;
 }
 
-.booked input[type="date"] {
+.map input[type="date"] {
 	background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 	border: none;
     width: 346px;
-    height: 38px; 
-    margin-left: ;
+    height: 38px;
 }
 
-.booked input[type="number"] {
+.map input[type="number"] {
+    margin: 0;
+    padding: 0;
 	background-color: #f2f2f2;
 	border: none;
     width: 114px;
-    height: 38px;
+    height: 38px;  
+}
+
+.map input[type="date"]:first-of-type {
     
 }
 
-.booked input[type="date"]:hover,
-.booked input[type="number"]:hover {
+.map input[type="date"]:nth-of-type(2) {
+    
+}
+
+.map input[type="number"]:first-of-type {
+/*
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 50px;
+*/
+}
+.map input[type="number"]:nth-of-type(2) {
+    
+}
+
+.map input[type="date"]:hover,
+.map input[type="number"]:hover {
 	background-color: #ebebeb;
 }
 
-.booked input[type="date"]:focus,
-.booked input[type="number"]:focus {
+.map input[type="date"]:focus,
+.map input[type="number"]:focus {
 	background-color: #ffffff;
 	border: solid 2px #e5e5e5;
 	outline: none;
 }
 
-.booked input[type="submit"] {
-    width: 458px;
+input[type="date"] {
+    background: url("../img/calendar.svg") no-repeat 100% 50%;
+}
+
+.map input[type="submit"] {
+    width: 457px;
     height: 58px;
     font-family: inherit;
     font-size: 21px;
@@ -454,15 +489,16 @@ img {
     font-weight: bold;
     text-transform: uppercase;
 	background-color: #81b3d2;
+    margin: 0;
 	color: #ffffff;
 	border: none;
 }
-.booked input[type="submit"]:hover,
+.map input[type="submit"]:hover,
 input[type="submit"]:focus {
 	color: #ffffff;
 	background-color: #669ec0;
 }
-.booked input[type="submit"]:active {
+.map input[type="submit"]:active {
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
 }
@@ -481,9 +517,15 @@ fieldset input[type="button"]:hover {
 
 
 .check {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
 	background-image: url(../img/back2.jpg);
-    display: block;
     background-position: 0 -1000px;
+    padding-top: 25px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 0;
 }
 .filters legend,
 .filters .price{
@@ -507,7 +549,7 @@ fieldset input[type="button"]:hover {
 
 .filter-range-title {
   margin-bottom: 9px;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 16px;
   line-height: 21px;
 }
@@ -598,7 +640,7 @@ fieldset input[type="button"]:hover {
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 33px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -614,61 +656,63 @@ fieldset input[type="button"]:hover {
   background: #ffffff;
 }
 
-p.found {
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 26px;
-}
-
-.check {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    padding-bottom: 33px;
+.input-wrapper {
+    margin-bottom: 20px;
 }
 
 .fieldset-1 {
     display: flex;
     flex-direction: row;
     border: none;
-    margin-top: 30px;
     color: #ffffff;
+    margin-right: 106px;
+    padding: 0;
 }
 
 .fieldset-1 legend {
-    margin-bottom: 10px;
+    margin-bottom: 22px;
 }
+.fieldset-2 legend {
+    margin-bottom: 18px;
+}
+.fieldset-3 legend {}
+
+
 
 .fieldset-2 {
     display: flex;
     flex-direction: row;
     border: none;
-    margin-top: 30px;
     color: #ffffff;
-}
-
-.fieldset-2 legend {
-    margin-bottom: 15px;
 }
 
  .fieldset-3 {
     display: flex;
     flex-direction: row;
     border: none;
-     margin-top: 30px;
+    padding: 0;
+    margin-left: auto;
 }
-
-.fieldset-3 legend {
-    margin-bottom: 15px;
-}
-
 
 .result {
     display: flex;
     flex-direction:row;
-    justify-content: space-around;
-    vertical-align: middle;
-    
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+p.found {
+	font-size: 21px;
+	font-weight: bold;
+	line-height: 26px;
+    margin-left: 72px;
+    margin-right: 49px;
+}
+p.sort {
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 39px;
 }
 
 .first-sort {
@@ -679,23 +723,27 @@ p.found {
 
 .first-sort label {
     border-bottom: 1px dashed #81b3d2;
+    margin-right: 30px;
 }
 
 .first-sort label:hover {
     color: #81b3d2;
 }
 
+.second-sort {
+    margin-left: auto;
+    margin-right: 72px;
+}
+
 .second-sort .first {
-    border: 7px solid transparent;	
-    border-top: 7px solid #81b3d2;
+    
 }
 .second-sort .second {
-    border: 7px solid transparent;	
-    border-bottom: 7px solid #cacaca;   
+    
 }
 
 .catalog {
-    padding: 0 73px;
+    padding: 0 0;
 }
 
 .catalog-list {
@@ -706,7 +754,6 @@ p.found {
 .catalog-list li{
     display: flex;
     flex-direction:row;
-    margin: 30px 0 30px 0;
 }
 
 .catalog-list .preview {
@@ -714,12 +761,26 @@ p.found {
     height: 90px;
     margin-right: 30px;
     display: block;
+    margin: 30px 30px 0 72px;
 }
 
 .catalog-list .information {
     flex-grow: 1; 
     padding: 0;
     margin: 0;
+}
+
+div .grade {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-right: 72px;
+    margin-top: 30px;
+}
+
+.stars img {
+    margin-left: 2px;
 }
 
 .catalog-list .grade {
@@ -729,16 +790,12 @@ p.found {
 }
 
 .catalog-list li {
-    border-bottom: 2px solid #e5e5e5;
-    padding: 0;
-    margin-top: 30px;
-    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
 }
 .catalog-list li:first-child {
-    border-top: 2px solid #e5e5e5;
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    border-top: 1px solid #e5e5e5;
+    margin-top: -2px;
 }
 
 .catalog-item h3 {
@@ -762,26 +819,30 @@ p.found {
 }
 
 .information h3 {
-    margin: 0;
-    padding: 0;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    
 }
 
-.information span p {
+p.inf-1 {
 	font-size: 14px;
 	line-height: 21px;
 	color: #333333;
-    margin: 0;
-    padding: 0;
+    margin-top: 8px;
 }
 
-span .stars {
-    
+.inf-1 span:first-child {
+    margin-right: 36px;
+}
+
+.information p {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .grade .rating {
     width: 110px;
     height: 27px;
-/*    margin-top: 47px;*/
 	font-size: 14px;
 	line-height: 21px;
 	color: #666666;
@@ -837,9 +898,10 @@ input[type="checkbox"] {
 input[type="checkbox"] + label::before {
     content: "";
     display: inline-block;
-    height: 24px;
-    width: 30px;
-    margin: 0 5px 0 0;
+    vertical-align: middle;
+    height: 23px;
+    width: 26px;
+    margin: 0 14px 0 0;
     background-image: url(../img/checkbox-off.svg);
     background-repeat: no-repeat;
 }
@@ -899,7 +961,7 @@ input[type="checkbox"]:checked + label::before {
     justify-content: center;
     width: 46px;
     height: 48px;
-    margin-right: 6px;
+    margin-right: 7px;
 	background-color: #81b3d2;
 }
 
@@ -921,7 +983,14 @@ input[type="checkbox"]:checked + label::before {
 .footer-copyright span {
 	font-size: 14px;
 	color: #000000;
+    display: inline-block;
+    vertical-align: middle;
 	line-height: 26px;
+}
+
+.footer-copyright a {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .copyright-button:hover path {
