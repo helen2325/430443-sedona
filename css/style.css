@@ -464,8 +464,20 @@ li.meal-item {
     height: 582px;
 }
 
-.map form {
-    display: flex;
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(-95px);
+      }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+.modal-form {
+    display: none;
     box-sizing: border-box;
     position: absolute;  
     padding: 56px 53px 52px 56px;
@@ -476,7 +488,13 @@ li.meal-item {
     background: #ffffff;
     box-shadow: 0px 0px 15px 7px rgba(0, 1, 1, 0.15);
     margin-left: -284px;
-    z-index: 1;
+}
+
+.modal-show {
+    display: flex;
+    
+    animation-name: move;
+    animation-duration: 0.6s;
 }
 
 form fieldset {
@@ -899,6 +917,7 @@ p.sort {
 .first-sort label {
     border-bottom: 1px dashed #81b3d2;
     margin-right: 30px;
+    font-weight: normal;
 }
 
 .first-sort label:hover {
@@ -921,8 +940,42 @@ p.sort {
 }
 
 .second-sort label {
-    margin-left: 8px;
+    margin-left: 10px;
     cursor: pointer;
+}
+
+.second-sort input[id="up"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    height: 11px;
+    width: 10px;
+    background-image: url(../img/up.png);
+    background-repeat: no-repeat;
+}
+
+.second-sort input[id="up"]:checked + label {
+    background-image: url(../img/up-blue.png);
+}
+
+.second-sort input[id="up"]:hover + label {
+    background-image: url(../img/up-black.png);
+}
+
+.second-sort input[id="down"] + label {
+    display: inline-block;
+    vertical-align: middle;
+    height: 11px;
+    width: 10px;
+    background-image: url(../img/down.png);
+    background-repeat: no-repeat;
+}
+
+.second-sort input[id="down"]:checked + label {
+    background-image: url(../img/down-blue.png);
+}
+
+.second-sort input[id="down"]:hover + label {
+    background-image: url(../img/down-black.png);
 }
 
 .catalog {
@@ -1131,6 +1184,10 @@ input[type="checkbox"]:checked + label::before {
 	line-height: 26px;
 }
 
+.hotels .tag {
+    padding-top: 0;
+}
+
 .footer-social {
     text-align: center;
 }
@@ -1144,6 +1201,10 @@ input[type="checkbox"]:checked + label::before {
     padding: 0;
     padding-left: 10px;
     padding-top: 4px;
+}
+
+.hotels .social {
+    padding-top: 0;
 }
 
 .social-button {
@@ -1164,6 +1225,10 @@ input[type="checkbox"]:checked + label::before {
     background-color: #5496bd;
 }
 
+.footer-social a:active path {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
 .footer-copyright {
     margin: 0;
     padding: 0;
@@ -1174,6 +1239,10 @@ input[type="checkbox"]:checked + label::before {
     align-items: center;
     justify-content: center;
     padding-top: 8px;
+}
+
+.hotels a {
+    padding-top: 0;
 }
 .footer-copyright span {
 	font-size: 14px;
