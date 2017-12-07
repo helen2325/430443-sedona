@@ -13,7 +13,7 @@
      <div class="container">
       <header class="main-header">
          <a class="main-header-logo">
-                  <img src="img/logo.png" width="138px" height="70px" alt="Логотип">
+                  <img src="img/logo.png" width="138" height="70" alt="Логотип">
          </a>
           <nav class="main-navigation">
               <ul class="site-navigation">
@@ -26,11 +26,11 @@
       </header>
       <main>
           <section class="background-image">
-             <img src="img/Welcome.png" width="188px" height="45px" alt="welcome">
-             <img src="img/tothegorgeous.png" width="256px" height="30px" alt="gorgeous">
-             <img src="img/Sedona.png" width="458px" height="78px" alt="sedona">
-             <img src="img/BecausetheGrandCanyonsucks!.png" width="296px" height="80px" alt="sucks">
-             <img src="img/Shape%201%20copy%203.png" width="1200px" height="57px">
+             <img src="img/Welcome.png" width="188" height="45" alt="welcome">
+             <img src="img/tothegorgeous.png" width="256" height="30" alt="gorgeous">
+             <img src="img/Sedona.png" width="458" height="78" alt="sedona">
+             <img src="img/BecausetheGrandCanyonsucks!.png" width="296" height="80" alt="sucks">
+             <img src="img/Shape%201%20copy%203.png" width="1200" height="57" alt="картинка">
           </section>
           <div class="caption-wrapper">
               <section class="caption">
@@ -133,7 +133,7 @@
                           <label class="number-of-adults" for="adults">Взрослые:</label>
                           <button type="button" name="min-adults">
                           </button>
-                          <input type="text" min="1" step="1" name="number-of-adults" id="adults" value="2">
+                          <input type="text"  name="number-of-adults" id="adults" value="2">
                           <button type="button" name="max-adults">
                           </button>
                           
@@ -142,7 +142,7 @@
                           <button type="button" name="min-children">
                               <span class="minus"></span>
                           </button>
-                          <input type="text" min="0" step="1" name="number-of-children" id="children" value="0">
+                          <input type="text"  name="number-of-children" id="children" value="0">
                           <button type="button" name="max-children">
                               <span class="plus"></span>
                           </button>
@@ -178,15 +178,7 @@
           </section>
       </main> 
     </div>
-    <script>
-        var link = document.querySelector(".for-form");
-        var popup = document.querySelector(".modal-form");
-        
-        link.addEventListener("click", function (evt) {
-            evt.preventDefault();
-            popup.classList.toggle("modal-show");
-        });
+    <script src="js/js.js">  
     </script>
-    
   </body>
 </html>
