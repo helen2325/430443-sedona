@@ -9,7 +9,6 @@ body {
 	background-color: #f2f2f2;
 }
 
-
 div {
     display: block;
 }
@@ -73,26 +72,37 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	list-style: none; 
 }
 
-.site-navigation li:first-child {
-    width: 20%;
+.site-navigation li {
+	width: 20%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+.site-navigation li:nth-child(1) {
 	text-align: left;
 }
 
 .site-navigation li:nth-child(2) {
-    width: 20%;
-	margin-right: 20%;
 	text-align: left;
+	margin-right: 20%; 
+	padding-left: 30px;
 }
 
 .site-navigation li:nth-child(3) {
-    width: 20%;
 	text-align: right;
+	padding-right: 32px;
 }
 
 .site-navigation li:nth-child(4) {
-    width: 20%;
 	text-align: right;
 }
 
@@ -348,8 +358,8 @@ li.meal-item {
 .meal-item h3::before {
     position: absolute;
     content: "";
-    top: -80px;
-    left: 162px;
+    top: -78px;
+    left: 160px;
 	background-image: url(../img/icon-3.svg);
 	background-repeat: no-repeat;
     background-position: 0 0;
@@ -364,7 +374,7 @@ li.meal-item {
 .souvenirs-item h3::before {
     position: absolute;
     content: "";
-    top: -85px;
+    top: -83px;
     left: 168px;
 	background-image: url(../img/icon-2.svg);
 	background-repeat: no-repeat;
@@ -508,6 +518,12 @@ li.meal-item {
     height: 582px;
 }
 
+iframe {
+	width: 1200px;
+	height: 582px;
+	border: none;
+}
+
 @-webkit-keyframes move {
     0% {
         opacity: 0;
@@ -557,7 +573,7 @@ li.meal-item {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     position: absolute;  
-    padding: 56px 53px 52px 56px;
+    padding: 56px 50px 52px 56px;
     width: 568px;
     height: 394px;
     top: 0;
@@ -861,7 +877,7 @@ input[type="submit"]:active {
 .price-controls label {
   display: inline-block;
   font-size: 14px;
-  line-height: 30px;
+  line-height: 21px;
   vertical-align: top;
   cursor: pointer;
 }
@@ -869,11 +885,13 @@ input[type="submit"]:active {
 .price-controls .min-price {
   width: 90px;
   padding-left: 65px;
+  padding-top: 5px;
 }
 
 .price-controls .max-price {
   width: 90px;
   padding-left: 55px;
+  padding-top: 5px;
 }
 
 .price-controls input {
@@ -1300,7 +1318,7 @@ input[type="checkbox"]:checked + label::before {
 .main-footer {
     position: absolute;
     bottom: 0;
-    min-height: 120px;
+	padding: 28px 0;
 	background-color: rgba(255, 255, 255, 0.8);
     display: -webkit-box;
     display: -ms-flexbox;
